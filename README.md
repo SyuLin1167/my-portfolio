@@ -1,5 +1,39 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Portfolio migration notes
+
+This project includes a port of your static portfolio page (COMCOM work detail) to Next.js (App Router).
+
+### Assets
+
+Copy your existing assets into the Next.js public folder so that `/assets/...` paths work:
+
+```
+<old> C:\Users\AMAyu\Desktop\portfolio\portfolio\assets
+ ->  <new> C:\Users\AMAyu\Desktop\portfolio\my-portfolio\public\assets
+```
+
+After copying, image references like `/assets/COMCOM/COMCOM.png` will resolve correctly.
+
+### Pages
+
+- Home: `app/page.tsx` (link added to the work detail page)
+- Work detail: `app/works/comcom/page.tsx`
+
+### Styles
+
+- The original `work-detail.css` has been merged into `app/globals.css` with minor adjustments (asset URLs changed to `/assets/...`).
+
+### Development
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:3000 and navigate to “作品ページ: COMCOM on the SKATE BOAD へ移動”.
+
 ## Getting Started
 
 First, run the development server:
