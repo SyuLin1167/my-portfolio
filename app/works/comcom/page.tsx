@@ -254,7 +254,9 @@ export default function ComcomPage() {
               <div className="feedback-bubble" ref={bubbleRef}>
                 <p className="detail-text">
                   初めてのゲーム制作に挑戦した作品です。技術面ではまだ未熟な部分が多い状態だったため、<br />
-                  3か月という限られた時間でゲームとして遊べる状態まで作り上げることを意識しました。
+                  3か月という限られた時間でゲームとして遊べる状態まで作り上げることを意識しました。<br />
+                  シンプルながらも楽しさを感じられるゲーム体験を目指して制作し、<br />
+                  クラス内の作品投票では最も票を集めることができました。
                 </p>
               </div>
               <ul className="chips">
