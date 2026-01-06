@@ -48,7 +48,7 @@ export const worksData: Work[] = [
   },
   {
     title: '怖徘(フハイ)',
-    image: '/assets/Huhai/huhai.png',
+    image: '/assets/Huhai/Huhai.png',
     description: '3Dホラーゲーム',
     tags: ['Game', '3D', 'Horror'],
     skills: ['c', 'cplusplus', 'json', 'photoshop', 'illustrator', 'blender', 'github', 'visualstudio'],
