@@ -20,19 +20,21 @@ export default function ComcomPage() {
   // GitHubを使わない作品のための表示切替用
   const githubLink: string | null = null;
 
+  const assetBase = "https://raw.githubusercontent.com/SyuLin1167/my-portfolio/main/public";
+
   // ダウンロードリンク（必要に応じてURLを設定）
   const downloads = {
     executable: {
       label: "実行ファイル（Windows）",
-      href: "/assets/COMCOM/COMCOM-exe.zip" as string | null,
+      href: `${assetBase}/assets/COMCOM/COMCOM-exe.zip` as string | null,
     },
     sourceZip: {
       label: "ソースコード",
-      href: "/assets/COMCOM/COMCOM-src.zip" as string | null,
+      href: `${assetBase}/assets/COMCOM/COMCOM-src.zip` as string | null,
     },
     projectFile: {
       label: "プロジェクト",
-      href: "/assets/COMCOM/COMCOM-project.zip" as string | null,
+      href: `${assetBase}/assets/COMCOM/COMCOM-project.zip` as string | null,
     },
   };
 

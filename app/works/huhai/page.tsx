@@ -64,19 +64,21 @@ export default function HuhaiPage() {
   // GitHubを使わない作品のための表示切替用
   const githubLink: string | null = "https://github.com/SyuLin1167/Huhai";
 
+  const assetBase = "https://raw.githubusercontent.com/SyuLin1167/my-portfolio/main/public";
+
   // ダウンロードリンク（必要に応じてURLを設定）
   const downloads = {
     executable: {
       label: "実行ファイル（Windows）",
-      href: "/assets/Huhai/Huhai-exe.zip" as string | null,
+      href: `${assetBase}/assets/Huhai/Huhai-exe.zip` as string | null,
     },
     sourceZip: {
       label: "ソースコード",
-      href: "/assets/Huhai/Huhai-src.zip" as string | null,
+      href: `${assetBase}/assets/Huhai/Huhai-src.zip` as string | null,
     },
     projectFile: {
       label: "プロジェクト",
-      href: "/assets/Huhai/Huhai-project.zip" as string | null,
+      href: `${assetBase}/assets/Huhai/Huhai-project.zip` as string | null,
     },
   };
 
