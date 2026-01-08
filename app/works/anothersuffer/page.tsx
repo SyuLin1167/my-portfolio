@@ -22,20 +22,20 @@ export default function AnotherSufferPage() {
 
   const githubLink: string | null = "https://github.com/SyuLin1167/AnotherSuffer";
 
-  const assetBase = "https://raw.githubusercontent.com/SyuLin1167/my-portfolio/main/public";
+  const assetBase = "https://github.com/SyuLin1167/my-portfolio/raw/refs/heads/master/public";
 
   const downloads = {
     executable: {
       label: "実行ファイル(Windows)",
-      href: `${assetBase}/assets/AnotherSuffer/AnotherSuffer-exe.zip` as string | null,
+      href: `${assetBase}/assets/AnotherSuffer/AnotherSuffer-exe.zip?download=` as string | null,
     },
     sourceZip: {
       label: "ソースコード",
-      href: `${assetBase}/assets/AnotherSuffer/AnotherSuffer-src.zip` as string | null,
+      href: `${assetBase}/assets/AnotherSuffer/AnotherSuffer-src.zip?download=` as string | null,
     },
     projectFile: {
       label: "プロジェクト",
-      href: `${assetBase}/assets/AnotherSuffer/AnotherSuffer-project.zip` as string | null,
+      href: `${assetBase}/assets/AnotherSuffer/AnotherSuffer-project.zip?download=` as string | null,
     },
   };
 
