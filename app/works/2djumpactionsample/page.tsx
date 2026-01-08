@@ -22,18 +22,20 @@ export default function JumpActionPage() {
 
   const githubLink: string | null = "https://github.com/SyuLin1167/2DJumpActionSample";
 
+  const assetBase = "https://raw.githubusercontent.com/SyuLin1167/my-portfolio/main/public";
+
   const downloads = {
     executable: {
       label: "実行ファイル（Windows）",
-      href: "/assets/2DJumpActionSample/2DJumpActionSample-exe.zip" as string | null,
+      href: `${assetBase}/assets/2DJumpActionSample/2DJumpActionSample-exe.zip` as string | null,
     },
     sourceZip: {
       label: "ソースコード",
-      href: "/assets/2DJumpActionSample/2DJumpActionSample-src.zip" as string | null,
+      href: `${assetBase}/assets/2DJumpActionSample/2DJumpActionSample-src.zip` as string | null,
     },
     projectFile: {
       label: "プロジェクト",
-      href: "/assets/2DJumpActionSample/2DJumpActionSample-project.zip" as string | null,
+      href: `${assetBase}/assets/2DJumpActionSample/2DJumpActionSample-project.zip` as string | null,
     },
   };
 
