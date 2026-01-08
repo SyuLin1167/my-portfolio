@@ -20,21 +20,21 @@ export default function HagePage() {
   // GitHubを使わない作品のための表示切替用
   const githubLink: string | null = null;
 
-  const assetBase = "https://raw.githubusercontent.com/SyuLin1167/my-portfolio/main/public";
+  const assetBase = "https://github.com/SyuLin1167/my-portfolio/raw/refs/heads/master/public";
 
   // ダウンロードリンク（必要に応じてURLを設定）
   const downloads = {
     executable: {
       label: "実行ファイル（Windows）",
-      href: `${assetBase}/assets/Hage/Hage-exe.zip` as string | null,
+      href: `${assetBase}/assets/Hage/Hage-exe.zip?download=` as string | null,
     },
     sourceZip: {
       label: "ソースコード",
-      href: `${assetBase}/assets/Hage/Hage-src.zip` as string | null,
+      href: `${assetBase}/assets/Hage/Hage-src.zip?download=` as string | null,
     },
     projectFile: {
       label: "プロジェクト",
-      href: `${assetBase}/assets/Hage/Hage-project.zip` as string | null,
+      href: `${assetBase}/assets/Hage/Hage-project.zip?download=` as string | null,
     },
   };
 
