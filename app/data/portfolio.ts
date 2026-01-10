@@ -129,14 +129,14 @@ export const skillCategories: SkillCategory[] = [
     twoColumn: true,
     items: [
       { label: 'Visual Studio', percent: 90, experience: '5年' },
-      { label: 'Visual Studio Code', percent: 35, experience: '2年' },
-      { label: 'Unity', percent: 20, experience: '1年' },
+      { label: 'Visual Studio Code', percent: 20, experience: '1年' },
+      { label: 'Unity', percent: 4, experience: '3ヶ月' },
       { label: 'C++', percent: 90, experience: '5年' },
-      { label: 'C#', percent: 20, experience: '1年' },
-      { label: 'C', percent: 35, experience: '2年' },
+      { label: 'C#', percent: 4, experience: '3ヶ月' },
+      { label: 'C', percent: 55, experience: '3年' },
       { label: 'HTML/CSS', percent: 12, experience: '8ヶ月' },
       { label: 'JavaScript', percent: 4, experience: '3ヶ月' },
-      { label: 'PHP', percent: 9, experience: '6ヶ月' },
+      { label: 'PHP', percent: 4, experience: '3ヶ月' },
     ],
   },
   {
@@ -149,7 +149,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'バージョン管理・クライアント',
     items: [
-      { label: 'GitHub', percent: 70, experience: '4年' },
+      { label: 'GitHub', percent: 90, experience: '5年' },
       { label: 'GitLab', percent: 20, experience: '1年' },
       { label: 'Fork', percent: 70, experience: '4年' },
       { label: 'SourceTree', percent: 20, experience: '1年' },
