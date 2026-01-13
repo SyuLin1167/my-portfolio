@@ -71,7 +71,7 @@ export const worksData: Work[] = [
     tags: ['Game', '2D', 'Action'],
     skills: ['c', 'cplusplus', 'json', 'bat', 'github', 'visualstudio', 'visualstudiocode'],
     link: '/works/2djumpactionsample',
-    date: '2024.07~now',
+    date: '2025.07~now',
   },
 ];
 
