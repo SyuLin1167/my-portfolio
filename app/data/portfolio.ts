@@ -69,7 +69,7 @@ export const worksData: Work[] = [
     image: '/assets/2DJumpActionSample/2DJumpActionSample.png',
     description: '2D横スクロールジャンプアクションのサンプル',
     tags: ['Game', '2D', 'Action'],
-    skills: ['c', 'cplusplus', 'json', 'bat', 'github', 'visualstudio', 'visualstudiocode'],
+    skills: ['c', 'cplusplus', 'json', 'bat', 'github', 'visualstudio'],
     link: '/works/2djumpactionsample',
     date: '2025.07~now',
   },
