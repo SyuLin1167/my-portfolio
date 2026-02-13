@@ -525,13 +525,13 @@ export default function AnotherSufferPage() {
               <ul className="bullet-list">
                 <li>迷路生成や経路探索など、アルゴリズムの実装経験が増えた。</li>
                 <p>
-                  改善前：アルゴリズムについての理解が浅く、実装に苦労した。<br />
-                  改善後：迷路生成には穴掘り法をベースにした再帰的なアルゴリズムを採用し、経路探索にはA*アルゴリズムを実装した。
+                  <span className="improvement-before">改善前：</span>アルゴリズムについての理解が浅く、実装に苦労した。<br />
+                  <span className="improvement-after">改善後：</span>迷路生成には穴掘り法をベースにした再帰的なアルゴリズムを採用し、経路探索にはA*アルゴリズムを実装した。
                 </p>
                 <li>描画処理における最適化や工夫の理解が深まった。</li>
                 <p>
-                  改善前：多数のオブジェクトが存在するシーンでの描画負荷に悩まされた。<br />
-                  改善後：バックカリングの有効化や距離・視野による描画制限を実装し、安定したフレームレートを維持できた。
+                  <span className="improvement-before">改善前：</span>多数のオブジェクトが存在するシーンでの描画負荷に悩まされた。<br />
+                  <span className="improvement-after">改善後：</span>バックカリングの有効化や距離・視野による描画制限を実装し、安定したフレームレートを維持できた。
                 </p>
               </ul>
             </div>

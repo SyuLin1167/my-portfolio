@@ -580,28 +580,28 @@ SetDrawMode(DX_DRAWMODE_NEAREST);
               <ul className="bullet-list">
                 <li>アクセス指定子を理解してカプセル化を強化しました。</li>
                 <p>
-                  改善前：publicのみを使用していたため、外部からの不正なアクセスが可能でした。<br />
-                  改善後：privateやprotectedを使用し、クラスの内部状態を保護しました。<br />
+                  <span className="improvement-before">改善前：</span>publicのみを使用していたため、外部からの不正なアクセスが可能でした。<br />
+                  <span className="improvement-after">改善後：</span>privateやprotectedを使用し、クラスの内部状態を保護しました。<br />
                 </p>
                 <li>継承や多態性を活用してコードの再利用性を向上させました。</li>
                 <p>
-                  改善前：同様の機能を持つクラスでコードの重複が多く、保守性が低下していました。<br />
-                  改善後：基底クラスを作成し、共通の機能を継承させることでコードの重複を削減しました。<br />
+                  <span className="improvement-before">改善前：</span>同様の機能を持つクラスでコードの重複が多く、保守性が低下していました。<br />
+                  <span className="improvement-after">改善後：</span>基底クラスを作成し、共通の機能を継承させることでコードの重複を削減しました。<br />
                 </p>
                 <li>行列演算を移動や回転の計算に活用しました。</li>
                 <p>
-                  改善前：ベクトル演算で位置や向きを計算しており、複雑な変換が困難でした。<br />
-                  改善後：行列を使用して一括で変換を行い、複雑な変換を簡潔に表現できるようにしました。<br />
+                  <span className="improvement-before">改善前：</span>ベクトル演算で位置や向きを計算しており、複雑な変換が困難でした。<br />
+                  <span className="improvement-after">改善後：</span>行列を使用して一括で変換を行い、複雑な変換を簡潔に表現できるようにしました。<br />
                 </p>
                 <li>JSONを用いてデータ管理を効率化しました。</li>
                 <p>
-                  改善前：オブジェクトの配置など、定数で管理しており、変更が困難でした。<br />
-                  改善後：JSONファイルでデータを一元管理し、柔軟に変更できるようにしました。<br />
+                  <span className="improvement-before">改善前：</span>オブジェクトの配置など、定数で管理しており、変更が困難でした。<br />
+                  <span className="improvement-after">改善後：</span>JSONファイルでデータを一元管理し、柔軟に変更できるようにしました。<br />
                 </p>
                 <li>シーン管理を導入してゲームの状態遷移を整理しました。</li>
                 <p>
-                  改善前：ゲームの状態遷移が複雑で、コードが長くなりやすい構造でした。<br />
-                  改善後：シーン管理を導入し、状態ごとに処理を分離して整理しました。<br />
+                  <span className="improvement-before">改善前：</span>ゲームの状態遷移が複雑で、コードが長くなりやすい構造でした。<br />
+                  <span className="improvement-after">改善後：</span>シーン管理を導入し、状態ごとに処理を分離して整理しました。<br />
                 </p>
               </ul>
             </div>
