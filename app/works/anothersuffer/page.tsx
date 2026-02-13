@@ -9,6 +9,7 @@ import { CodeBox } from "@/components/CodeBox";
 interface Item {
   id: string;
   title: string;
+  category: string;
   content: React.ReactNode;
 }
 
@@ -53,6 +54,7 @@ export default function AnotherSufferPage() {
       {
         id: "acc-1",
         title: "ステージ生成",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -88,15 +90,17 @@ export default function AnotherSufferPage() {
               </figcaption>
             </figure>
             <p>
-              穴掘り法をベースにした再帰的な迷路生成アルゴリズムを実装しました。<br />
-              これにより、毎度異なるレイアウトの迷路を自動生成できるようになりました。
+              ● ローグライク要素を取り入れたい<br />
+              - 穴掘り法をベースにした再帰的な迷路生成アルゴリズムを実装しました。<br />
+              これにより、毎度異なる迷路を自動生成できるようになりました。
             </p>
           </>
         ),
       },
       {
         id: "acc-2",
-        title: "オブジェクト描画の工夫",
+        title: "描画の最適化",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -137,51 +141,17 @@ export default function AnotherSufferPage() {
               </figcaption>
             </figure>
             <p>
-              描画負荷軽減のため、バックカリングの有効化や距離・視野による描画制限を実装しました。<br />
+              ● 描画負荷を軽減したい<br />
+              - バックカリングの有効化や距離・視野による描画制限を実装しました。<br />
               これにより、多数のオブジェクトが存在するシーンでも安定したフレームレートを維持できました。
             </p>
           </>
         ),
       },
       {
-        id: "acc-3",
-        title: "ミニマップ",
-        content: (
-          <>
-          <figure style={{ margin: "0 0 10px" }}>
-              <img
-                src="/assets/AnotherSuffer/AppealPoint_3.png"
-                alt="ミニマップのスクリーンショット"
-                style={{
-                  width: "100%",
-                  maxWidth: 560,
-                  borderRadius: 12,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.22)",
-                  display: "block",
-                  margin: "0 auto",
-                }}
-              />
-              <figcaption
-                style={{
-                  textAlign: "center",
-                  fontSize: "0.9rem",
-                  color: "#bcd7ff",
-                  marginTop: 6,
-                }}
-              >
-                ミニマップのスクリーンショット
-              </figcaption>
-            </figure>
-            <p>
-              ミニマップを実装し<br />
-              特定の操作中は、プレイヤーの位置や周囲の状況を把握できるようにしました。
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "acc-4",
+        id: "acc-5",
         title: "タイトル画面の演出",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -209,15 +179,17 @@ export default function AnotherSufferPage() {
               </figcaption>
             </figure>
             <p>
-              ゲームを開始するトリガーを工夫しました。<br />
-              ボールを特定の場所へ動かすことでゲームを開始するようにし、他のゲームとの差別化を図りました。
+              ● オリジナリティのあるゲームを開始するトリガーを実装したい<br />
+              - ボールを特定の場所へ動かすことでゲームを開始するようにするアイデアを採用しました。<br />
+              これにより、ボタンのクリックや任意のキーを押して開始する一般的なゲームとの差別化を図りました。
             </p>
           </>
         ),
       },
       {
-        id: "acc-5",
-        title: "敵キャラクターの追尾",
+        id: "acc-6",
+        title: "敵の追従AI",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -256,22 +228,52 @@ export default function AnotherSufferPage() {
               </figcaption>
             </figure>
             <p>
-              敵キャラクターがプレイヤーを追尾するためにA*アルゴリズムを実装しました。<br />
+              ● 敵キャラクターにプレイヤーを追尾させたい<br />
+              - 正方形のグリッドマップ上において、経路探索はA*アルゴリズムが良いと思い採用しました。<br />
               これにより、迷路内で効率的にプレイヤーを追い詰める動作を実現しました。
             </p>
           </>
         ),
       },
       {
-        id: "acc-6",
-        title: "前回からの成長点",
+        id: "acc-3",
+        title: "ミニマップ",
+        category: "機能",
         content: (
-            <ul className="bullet-list">
-              <li>迷路生成や経路探索など、アルゴリズムの実装経験が増えた。</li>
-              <li>描画処理における最適化や工夫の理解が深まった。</li>
-            </ul>
+          <>
+          <figure style={{ margin: "0 0 10px" }}>
+              <img
+                src="/assets/AnotherSuffer/AppealPoint_3.png"
+                alt="ミニマップのスクリーンショット"
+                style={{
+                  width: "100%",
+                  maxWidth: 560,
+                  borderRadius: 12,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.22)",
+                  display: "block",
+                  margin: "0 auto",
+                }}
+              />
+              <figcaption
+                style={{
+                  textAlign: "center",
+                  fontSize: "0.9rem",
+                  color: "#bcd7ff",
+                  marginTop: 6,
+                }}
+              >
+                ミニマップのスクリーンショット
+              </figcaption>
+            </figure>
+            <p>
+              ● 迷路内での位置把握を支援したい<br />
+              - カリングの機能を確かめるために、ミニマップを実装しました<br />
+              カリングを実装し、描画中のオブジェクトのみをミニマップに反映させました。<br />
+              プレイヤーの進行方向周辺のみを表示する仕様となり、より難易度の高いゲーム体験を提供しました。
+            </p>
+          </>
         ),
-      }
+      },
     ],
     []
   );
@@ -493,7 +495,10 @@ export default function AnotherSufferPage() {
                           }
                         }}
                       >
-                        {it.title}
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                          <span className="category-badge" data-category={it.category}>{it.category}</span>
+                          {it.title}
+                        </span>
                       </button>
                       <div
                         className={`accordion-panel${isOpen ? " is-open" : ""}`}
@@ -510,6 +515,25 @@ export default function AnotherSufferPage() {
                   );
                 })}
               </div>
+            </div>
+
+            <div className="detail-item">
+              <div className="detail-item__head">
+                <span className="detail-icon" aria-hidden="true">🌱</span>
+                <h3 className="detail-title">前回からの成長点</h3>
+              </div>
+              <ul className="bullet-list">
+                <li>迷路生成や経路探索など、アルゴリズムの実装経験が増えた。</li>
+                <p>
+                  改善前：アルゴリズムについての理解が浅く、実装に苦労した。<br />
+                  改善後：迷路生成には穴掘り法をベースにした再帰的なアルゴリズムを採用し、経路探索にはA*アルゴリズムを実装した。
+                </p>
+                <li>描画処理における最適化や工夫の理解が深まった。</li>
+                <p>
+                  改善前：多数のオブジェクトが存在するシーンでの描画負荷に悩まされた。<br />
+                  改善後：バックカリングの有効化や距離・視野による描画制限を実装し、安定したフレームレートを維持できた。
+                </p>
+              </ul>
             </div>
 
             <div className="detail-item">

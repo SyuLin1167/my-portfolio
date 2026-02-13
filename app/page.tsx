@@ -146,6 +146,11 @@ export default function Home() {
               >
                 <div className="work-thumb">
                   <img src={work.image} alt={`${work.title} のスクリーンショット`} />
+                  {work.featured && (
+                    <span className="featured-badge" aria-label="注目作品">
+                      ⭐ 注目
+                    </span>
+                  )}
                 </div>
                 <h3>{work.title}</h3>
                 {work.tags?.length ? (

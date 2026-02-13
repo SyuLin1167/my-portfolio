@@ -7,6 +7,7 @@ import { useWorkPageEffects } from "@/hooks/useWorkPageEffects";
 interface Item {
   id: string;
   title: string;
+  category: string;
   content: React.ReactNode;
 }
 
@@ -53,6 +54,7 @@ export default function ComcomPage() {
       {
         id: "acc-1",
         title: "坂道の挙動",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -80,7 +82,8 @@ export default function ComcomPage() {
               </figcaption>
             </figure>
             <p>
-              通常のブロック衝突とは別で、独自で斜めに対する衝突判定を計算し坂道の挙動を実装しています。
+              ● 坂道での自然な挙動を実現したい<br />
+              - 45度の坂道に対応する計算を行い坂道を実装しました。<br />
             </p>
           </>
         ),
@@ -88,6 +91,7 @@ export default function ComcomPage() {
       {
         id: "acc-2",
         title: "複数のステージを収録",
+        category: "機能",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -114,14 +118,16 @@ export default function ComcomPage() {
                 ステージ選択画面の様子
               </figcaption>
             </figure>
-            <p>短く多彩なステージデザインを盛り込み、誰でも手軽に遊べるようにしました。</p>
-            <p>各ステージごとに異なるギミックや障害物を配置し、プレイヤーに飽きさせない工夫をしました。</p>
+            ● 多彩なステージを提供したい<br />
+            - 短く多彩なステージデザインを盛り込み、誰でも手軽に遊べるようにしました。<br />
+            各ステージごとに異なるギミックや障害物を配置し、プレイヤーに飽きさせない工夫をしました。
           </>
         ),
       },
       {
         id: "acc-3",
         title: "手描きアートで世界観を統一",
+        category: "見せ方",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -143,7 +149,8 @@ export default function ComcomPage() {
                 メインビジュアル
               </figcaption>
             </figure>
-            <p>Photoshopでアセットを自作することで、作品の世界観を表現しています。</p>
+            ● 統一感のあるアートスタイルを目指したい<br />
+            Photoshopでアセットを自作することで、作品の世界観を表現しています。<br />
           </>
         ),
       },
@@ -384,7 +391,10 @@ export default function ComcomPage() {
                           }
                         }}
                       >
-                        {it.title}
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                          <span className="category-badge" data-category={it.category}>{it.category}</span>
+                          {it.title}
+                        </span>
                       </button>
                       <div
                         className={`accordion-panel${isOpen ? " is-open" : ""}`}

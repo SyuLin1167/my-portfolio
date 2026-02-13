@@ -77,6 +77,38 @@
   100% { opacity: 0; transform: translate(-50%, -50%) scale(24); }
 }
 
+/* カテゴリバッジ */
+.category-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+/* 技術カテゴリ - 青系 */
+.category-badge[data-category="技術"] {
+  background: linear-gradient(120deg, rgba(56, 189, 248, 0.28), rgba(96, 165, 250, 0.28));
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #7dd3fc;
+}
+
+/* 機能カテゴリ - 緑系 */
+.category-badge[data-category="機能"] {
+  background: linear-gradient(120deg, rgba(34, 197, 94, 0.28), rgba(74, 222, 128, 0.28));
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  color: #86efac;
+}
+
+/* 見せ方カテゴリ - 紫/ピンク系 */
+.category-badge[data-category="見せ方"] {
+  background: linear-gradient(120deg, rgba(168, 85, 247, 0.28), rgba(232, 121, 249, 0.28));
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  color: #e9d5ff;
+}
+
 /* アイコンの軽いバウンス */
 .detail-item__head .detail-icon {
   transition: transform 250ms ease;

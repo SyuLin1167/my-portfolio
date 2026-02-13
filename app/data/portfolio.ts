@@ -6,6 +6,7 @@ export type Work = {
   skills: string[];
   link: string;
   date: string;
+  featured?: boolean; // 優先的に見せたい作品にマーク
 };
 
 export type HistoryItem = {
@@ -54,6 +55,7 @@ export const worksData: Work[] = [
     skills: ['c', 'cplusplus', 'json', 'photoshop', 'illustrator', 'blender', 'github', 'visualstudio'],
     link: '/works/huhai',
     date: '2023.06',
+    featured: true,
   },
   {
     title: 'AnotherSuffer',
@@ -72,6 +74,7 @@ export const worksData: Work[] = [
     skills: ['c', 'cplusplus', 'json', 'bat', 'github', 'visualstudio'],
     link: '/works/2djumpactionsample',
     date: '2025.07~now',
+    featured: true,
   },
 ];
 
