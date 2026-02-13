@@ -9,6 +9,7 @@ import { useWorkPageEffects } from "@/hooks/useWorkPageEffects";
 interface Item {
   id: string;
   title: string;
+  category: string;
   content: React.ReactNode;
 }
 
@@ -95,8 +96,9 @@ export default function HuhaiPage() {
   const items: Item[] = useMemo(
     () => [
       {
-        id: "acc-1",
+        id: "acc-3",
         title: "タイトル画面の構成",
+        category: "見せ方",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -124,15 +126,20 @@ export default function HuhaiPage() {
               </figcaption>
             </figure>
             <p>
-              タイトル画面でも3D空間を取り入れたかったため、UIやタイトルの配置に合わせた視点にしました。<br />
-              画面が止まっている状況を作らないように、ランダムなタイミングでライトを点滅させる演出も実装しました。
+              ● タイトル画面でも3D空間を取り入れたい<br />
+                - UIを左下に配置し奥行きのある視点にしました。<br />
+                  シンプルな構成で雰囲気を演出できるため、作業コストを抑えられました。<br />
+              ● 画面が固まっていると勘違いしないようにしたい<br />
+                - ランダムなタイミングでライトを点滅させる演出を取り入れました。<br />
+                  点灯・点滅・暗転を切り替える形で、画面が動いていることを伝えられました。<br />
             </p>
           </>
         ),
       },
       {
-        id: "acc-2",
-        title: "メニュー画面の実装",
+        id: "acc-6",
+        title: "ポーズメニューの実装",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -160,14 +167,20 @@ export default function HuhaiPage() {
               </figcaption>
             </figure>
             <p>
-              ゲーム中にポーズメニューを開けるようにして、感度や明るさを設定・変更できるようにしました
+              ● ゲーム中にポーズメニューを開けるようにしたい<br />
+                - コルーチンなど未習得だったため、ポーズメニュー直前のゲーム画面を<br />
+                  テクスチャに保存して背景として表示する方法を採用しました。<br />
+              ● 音量やマウス感度を調整できるようにしたい<br />
+                - スライダーで調整可能にしました。<br />
+                一般的なスライドバーではなく、つまみをドラッグするUIにすることで、操作している感覚を強められました。<br />
             </p>
           </>
         ),
       },
       {
-        id: "acc-3",
-        title: "オブジェクトの配置",
+        id: "acc-2",
+        title: "オブジェクトの配置のアプローチ",
+        category: "機能",
         content: (
           <>
             <CodeBox
@@ -207,15 +220,17 @@ export default function HuhaiPage() {
                 JSONファイルからオブジェクトの位置情報を読み込む処理
               </figcaption>
             <p>
-              JSONを使用してオブジェクトの位置情報を管理し、ゲーム起動時に読み込む仕組みを実装しました。<br />
-              これにより、オブジェクトの追加や調整が容易になり、開発効率が向上しました。
+              ● オブジェクトの配置を柔軟に管理したい<br />
+                - JSONファイルを使用してオブジェクトの位置情報を管理し、ゲーム起動時に読み込む仕組みを実装しました。<br />
+              オブジェクトの追加や調整が容易になり、開発効率が向上しました。<br />
             </p>
           </>
         ),
       },
       {
-        id: "acc-4",
+        id: "acc-1",
         title: "ブルーム効果",
+        category: "見せ方",
         content: (
           <>
             <CodeBox
@@ -250,8 +265,10 @@ SetDrawMode(DX_DRAWMODE_NEAREST);
                 ブルーム効果の実装
               </figcaption>
             <p>
-              暗所での可視性を高めつつホラーの雰囲気を維持するため、ブルーム効果を工夫して実装しました。<br />
-              また、メニュー画面でブルーム効果の適用を切り替えられるようにしました。
+              ● ブルーム効果を実装したい<br />
+              - 画面の高輝度部分を抽出し、ダウンサンプリングとガウスぼかしを適用してブルーム効果を実装しました。<br />
+              暗所での可視性を高めつつホラーの雰囲気を維持できました。<br />
+              - メニュー画面でブルーム効果の適用を切り替えられるようにしました。<br />
             </p>
           </>
         ),
@@ -259,6 +276,7 @@ SetDrawMode(DX_DRAWMODE_NEAREST);
       {
         id: "acc-5",
         title: "ゲーム内UI",
+        category: "見せ方",
         content: (
           <>
            <figure style={{ margin: "0 0 10px" }}>
@@ -285,22 +303,11 @@ SetDrawMode(DX_DRAWMODE_NEAREST);
                 ゲーム内UIの様子
               </figcaption>
             </figure>
-            <p>ゲーム中の操作案内をオブジェクトより前のレイヤーに表示されるようにし、没入感を損なわないUIを意識してデザインしました。</p>
-          </>
-        ),
-      },
-      {
-        id: "acc-6",
-        title: "前回からの成長点",
-        content: (
-          <>
-          <ul className="bullet-list">
-            <li>アクセス指定子を理解してカプセル化を強化しました。</li>
-            <li>継承や多態性を活用してコードの再利用性を向上させました。</li>
-            <li>行列演算を移動や回転の計算に活用しました。</li>
-            <li>JSONを用いてデータ管理を効率化しました。</li>
-            <li>シーン管理を導入してゲームの状態遷移を整理しました。</li>
-          </ul>
+            <p>
+              ● ゲーム中の操作案内を分かりやすく表示したい<br />
+                - 特定のオブジェクトに近づくと操作案内が表示されるようにしました。<br />
+                また、プレイヤーが移動しても常に正面に向くようにして視認性を確保しました。<br />
+            </p>
           </>
         ),
       },
@@ -543,7 +550,10 @@ SetDrawMode(DX_DRAWMODE_NEAREST);
                           }
                         }}
                       >
-                        {it.title}
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                          <span className="category-badge" data-category={it.category}>{it.category}</span>
+                          {it.title}
+                        </span>
                       </button>
                       <div
                         className={`accordion-panel${isOpen ? " is-open" : ""}`}
@@ -560,6 +570,40 @@ SetDrawMode(DX_DRAWMODE_NEAREST);
                   );
                 })}
               </div>
+            </div>
+
+            <div className="detail-item">
+              <div className="detail-item__head">
+                <span className="detail-icon" aria-hidden="true">🌱</span>
+                <h3 className="detail-title">前回からの成長点</h3>
+              </div>
+              <ul className="bullet-list">
+                <li>アクセス指定子を理解してカプセル化を強化しました。</li>
+                <p>
+                  改善前：publicのみを使用していたため、外部からの不正なアクセスが可能でした。<br />
+                  改善後：privateやprotectedを使用し、クラスの内部状態を保護しました。<br />
+                </p>
+                <li>継承や多態性を活用してコードの再利用性を向上させました。</li>
+                <p>
+                  改善前：同様の機能を持つクラスでコードの重複が多く、保守性が低下していました。<br />
+                  改善後：基底クラスを作成し、共通の機能を継承させることでコードの重複を削減しました。<br />
+                </p>
+                <li>行列演算を移動や回転の計算に活用しました。</li>
+                <p>
+                  改善前：ベクトル演算で位置や向きを計算しており、複雑な変換が困難でした。<br />
+                  改善後：行列を使用して一括で変換を行い、複雑な変換を簡潔に表現できるようにしました。<br />
+                </p>
+                <li>JSONを用いてデータ管理を効率化しました。</li>
+                <p>
+                  改善前：オブジェクトの配置など、定数で管理しており、変更が困難でした。<br />
+                  改善後：JSONファイルでデータを一元管理し、柔軟に変更できるようにしました。<br />
+                </p>
+                <li>シーン管理を導入してゲームの状態遷移を整理しました。</li>
+                <p>
+                  改善前：ゲームの状態遷移が複雑で、コードが長くなりやすい構造でした。<br />
+                  改善後：シーン管理を導入し、状態ごとに処理を分離して整理しました。<br />
+                </p>
+              </ul>
             </div>
 
             <div className="detail-item">

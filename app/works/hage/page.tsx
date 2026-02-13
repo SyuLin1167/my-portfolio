@@ -7,6 +7,7 @@ import { useWorkPageEffects } from "@/hooks/useWorkPageEffects";
 interface Item {
   id: string;
   title: string;
+  category: string;
   content: React.ReactNode;
 }
 
@@ -53,6 +54,7 @@ export default function HagePage() {
       {
         id: "acc-1",
         title: "敵の追従",
+        category: "技術",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -80,18 +82,16 @@ export default function HagePage() {
               </figcaption>
             </figure>
             <p>
-              プレイヤーの位置を追跡して移動する敵キャラクターを実装しました。<br />
-              座標に合わせて移動する方向を計算し、一定速度で追従するようにしています。<br />
-              マップ移動時、敵の座標を更新してプレイヤーを正確に追従するようにしています。<br />
-              展示イベントへ出展する作品の候補として選ばれましたが、<br />
-              枠が限られていたため惜しくも落選となりました。
+              ● 敵キャラクターの追従機能を実装したい<br />
+              - プレイヤーの位置からの距離に応じて敵が接近する軸を選択し、一定速度で追従するようにしました。<br />
             </p>
           </>
         ),
       },
       {
-        id: "acc-2",
+        id: "acc-3",
         title: "メニュー画面の実装",
+        category: "機能",
         content: (
           <>
             <figure style={{ margin: "0 0 10px" }}>
@@ -119,21 +119,10 @@ export default function HagePage() {
               </figcaption>
             </figure>
             <p>
-              メニュー画面からゲームの進行状況を一時保存できるようにしました。<br />
-              また、タイトル画面にも戻ることも可能で、ゲームを中断することができます。<br />
+              ● メニュー画面からゲームの進行状況を一時保存できるようにしたい。<br />
+              - ゲームの進行状況を保存し、後で再開できるようにしました。<br />
+              タイトル画面にも戻ることも可能で、ゲームを中断することができます。
             </p>
-          </>
-        ),
-      },
-      {
-        id: "acc-3",
-        title: "前回からの成長点",
-        content: (
-          <>
-          <ul className="bullet-list">
-            <li>フレームレートの最適化を行い、動作を安定させました。</li>
-            <li>メニュー画面を追加して、ゲームループの管理を改善しました。</li>
-          </ul>
           </>
         ),
       },
@@ -368,7 +357,10 @@ export default function HagePage() {
                           }
                         }}
                       >
-                        {it.title}
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                          <span className="category-badge" data-category={it.category}>{it.category}</span>
+                          {it.title}
+                        </span>
                       </button>
                       <div
                         className={`accordion-panel${isOpen ? " is-open" : ""}`}
@@ -385,6 +377,30 @@ export default function HagePage() {
                   );
                 })}
               </div>
+            </div>
+
+            <div className="detail-item">
+              <div className="detail-item__head">
+                <span className="detail-icon" aria-hidden="true">🌱</span>
+                <h3 className="detail-title">前回からの成長点</h3>
+              </div>
+              <ul className="bullet-list">
+                <li>デルタタイムの算出を行い、動作を安定させました。</li>
+                <p>
+                  改善前：フレームレートに依存した動作となっており、環境によって挙動が異なっていた。<br />
+                  改善後：システムクロックを用いてデルタタイムを算出し、動作を安定させた。
+                </p>
+                <li>メニュー画面を追加して、ゲームループの管理を改善しました。</li>
+                <p>
+                  改善前：ゲームの進行状況を保存・復元する仕組みがなく、ユーザー体験が損なわれていた。<br />
+                  改善後：メニュー画面を実装し、ゲームの進行状況を保存・復元できるようにした。
+                </p>
+                <li>敵の追従アルゴリズムを実装し、ゲームプレイの緊張感を向上させました。</li>
+                <p>
+                  改善前：キャラクターの追尾機能の実装経験がなかった。<br />
+                  改善後：プレイヤーの位置を追跡して移動する敵キャラクターを実装し、ゲームプレイの緊張感を向上させた。
+                </p>
+              </ul>
             </div>
 
             <div className="detail-item">
